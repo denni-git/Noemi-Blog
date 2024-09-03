@@ -1,0 +1,440 @@
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Open Sans';
+	line-height: 1;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url("../fonts/OpenSans-Regular.woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url("../fonts/OpenSans-Bold.woff");
+	font-weight: 700;
+	font-style: bold;
+}
+
+.head {  
+	min-width: 1660px;
+	min-height: 440px;	
+	padding: 29px 250px 145px;	
+	box-sizing: border-box;
+	position: relative;
+
+	background-image: url("../images/banner-bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;  	
+}
+
+.head::after {
+	content: "";
+	background-color: #000000;
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	opacity: 0.6;
+}
+
+.head-container {	
+	display: flex;
+	justify-content: space-between;		
+	position: relative;
+	z-index: 2; 	
+}
+
+.logo {	
+	width: 179px;
+}
+
+.menu {
+	display: flex;	
+	align-items:center;
+}
+
+.menu-list {	
+	display: flex;	
+}
+
+.menu-list-item {
+	list-style-type: none;		
+	margin-right: 35px;
+}
+
+.menu-list-item:last-child {
+	margin-right: 0;
+}
+
+.menu-link {
+	font-size: 13px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.blog-title-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 70px;	
+}
+
+.blog-title {	
+	width: 680px;	
+	text-align: center;
+	
+	position: relative;
+	z-index: 2;		
+
+	font-size: 45px;
+	line-height: 75px;
+	color: #ffffff;	
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.main {
+	width: 1200px;
+	margin: 64px auto;
+	padding: 0 15px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.post {
+	margin-bottom: 59px;
+}
+
+.post:last-child {
+	margin-bottom: 0;
+}
+
+.post-img {
+	display: inline-block;	
+	vertical-align: top;
+}
+
+.post-descr {
+	margin-left: 15px;
+	width: 364px;
+	height: 294px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.post-tags {
+	margin-bottom: 14px;
+	font-size: 14px;
+}
+
+.post-tag {
+	margin-right: 19px;
+	
+	color: #b59f5b;	
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.post-title-container {
+	margin-bottom: 36px;
+}
+
+.post-title {
+	font-size: 20px;
+	line-height: 24px;
+	color: #0f0d0e;
+	text-transform: uppercase;
+}
+
+.post-info {
+	margin-bottom: 54px;	
+}
+
+.post-date {
+	margin-right: 14px;
+	font-size: 12px;
+	color: #888888;
+}
+
+.post-author {
+	font-size: 12px;
+	color: #000000;
+}
+
+.post-text {
+	font-size: 15px;
+	line-height: 22px;
+	color: #0f0d0e;
+}
+
+/*----------------------
+		side-bar
+----------------------*/
+
+.side-bar {
+	width: 272px;
+	box-sizing: border-box;	
+}
+
+.side-bar-title {
+	margin-bottom: 14px;
+	text-align: center;	
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: #0f0d0e;
+	text-transform: uppercase;	
+}
+
+.side-bar-title-rect {
+	width: 66px;
+	height: 3px;
+	margin: 0 auto 29px;
+	
+	background-color: #b59f5b;	
+}
+
+.side-bar-btn {
+	border: none;
+	background-color: #b59f5b;
+}
+
+.side-bar-btn:hover {
+	cursor: pointer;
+	background-color: #323232;
+}
+
+.new-posts {
+	margin-bottom: 62px;
+}
+
+.new-post {
+	margin-bottom: 22px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.new-post:last-child {
+	margin-bottom: 60px;
+}
+
+.new-post-descr {
+	width: 181px;
+}
+
+.new-post-date {
+	margin-bottom: 9px;
+	
+	font-size: 12px;
+	color: #a9a9a9;	
+}
+
+.new-post-title {
+	font-size: 14px;
+	line-height: 18px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.search {
+	display: flex;
+}
+
+.side-bar-inp {
+	padding-left: 18px;
+	box-sizing: border-box;	
+	
+	font-family: inherit;
+	font-size: 13px;
+	background-color: #f4f7f6;
+	border: none;	
+	box-shadow: 0 1px 0 #fbfcfc;	
+}
+
+.side-bar-inp:focus {
+	outline: none;	
+	border: 1px solid #b59f5b;	
+	box-shadow: 0 1px 0 #e6dfc8;
+}
+
+.search-inp {
+	width: 224px;
+	height: 48px;	
+}
+
+.search-inp:focus {	
+	border-right: none;	
+}
+
+.search-inp:focus ~ .search-btn {	
+	box-shadow: 0 1px 0 #e6dfc8;
+}
+
+.search-inp::placeholder {
+	font-size: 13px;
+	color: #a2a4a3;
+}
+
+.search-btn {	
+	width: 48px;
+	height: 48px;
+		
+	background-image: url("../images/search.svg");	
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	box-shadow: 0 1px 0 #fbfcfc;
+}
+
+.newsletter {
+	margin-bottom: 61px;
+}
+
+.subscribe {
+	display: flex;
+	flex-direction: column;
+}
+
+.email-inp {
+	width: 270px;
+	height: 48px;
+	margin-bottom: 16px;
+}
+
+.subscribe-btn {
+	width: 270px;
+	height: 48px;
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;	
+	box-shadow: 0 -1px 0 #e6dfc8;
+}
+
+.subscribe-btn:hover {
+	box-shadow: 0 -1px 0 #bbbbbb;
+}
+
+.tags {
+	margin-bottom: 61px;
+}
+
+.tags-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tag {
+	margin: 0 5px 6px 1px;
+	padding: 8px 14px 6px 13px;
+	
+	border: 3px solid #eeeeee;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0f0d0e;
+	text-transform: uppercase;	
+}
+
+.tag:hover {
+	border: 3px solid #b59f5b;
+}
+
+.topic-container {	
+	height: 48px;
+	width: 270px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.topic-name {
+	display: inline-block;
+	margin-top: 19px;
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.topic-count {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 16px;
+	
+	font-size: 12px;	
+	font-weight: bold;
+	color: #b59f5b;	
+}
+
+/*----------------------
+		footer
+----------------------*/
+
+.foot {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	width: 1170px;
+	height: 83px;
+	margin-bottom: 74px;
+	padding: 0 15px;
+	
+	background-color: #f4f7f6;
+}
+
+.social-link {
+	margin-right: 30px;
+}
+
+.social-link:last-child {
+	margin-right: 0;
+}
+
+.twitter-logo {
+	/* width: 25px; */
+	height: 24px;
+}
+
+.pinterest-logo {
+	/* width: 16px; */
+	height: 20px;
+}
+
+.facebook-logo {
+	/* width: 12px; */
+	height: 20px;
+}
+
+.instagram-logo {
+	/* width: 20px; */
+	height: 20px;
+}
+
+.tumblr-logo {
+	/* width: 13px; */
+	height: 20px;
+}
+
+.copyrights {	
+	margin-bottom: 41px;
+	
+	font-size: 12px;
+	font-weight: bold;
+	color: #999999;
+}
